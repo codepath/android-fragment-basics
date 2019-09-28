@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity  implements PizzaMenuFragmen
       FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();// begin  FragmentTransaction
       ft2.add(R.id.flContainer2, secondFragment);                               // add    Fragment
       ft2.commit();                                                            // commit FragmentTransaction
+      
+      
+      PizzaMenuFragment firstFragmnet = new PizzaMenuFragment();
+      getSupportFragmentManager()
+              .beginTransaction()
+              .replace(R.id.flContainer, firstFragmnet)
+              .commit();
     }
   }
 
